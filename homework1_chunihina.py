@@ -18,7 +18,7 @@ for boost in 'Hello world!':
 apples = 2
 bananas = apples * 4
 
-# task 05 == виправте назви змінних
+# task 05 == Виправте назви змінних
 side_one = 1
 side_two = 2
 side_three = 3
