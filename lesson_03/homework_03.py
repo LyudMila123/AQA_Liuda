@@ -1,5 +1,4 @@
-"""Модуль для задач с использованием строк и математических вычислений."""
-
+"""Модуль для задач с использованием строк и математических вычислений.""
 # task 01 == Розділіть alice_in_wonderland, щоб вона займала декілька фіз.лінії
 alice_in_wonderland = (
     "'Would you tell me, please,"
@@ -131,10 +130,7 @@ total_cake = cake_quantity * cake_price
 total_water = water_quantity * water_price
 
 total_cost = (
-    total_pizza_big
-    + total_pizza_medium
-    + total_juice
-    + total_cake
+    total_pizza_big + total_pizza_medium + total_juice + total_cake +
     + total_water
 )
 print(f'Загальна сума для замовлення Іринки: {total_cost} грн.')
@@ -150,9 +146,9 @@ total_photos = 232  # Загальна кількість фотографій
 photos_per_page = 8  # Кількість фотографій на одній сторінці
 
 pages_needed = (
-        (total_photos + photos_per_page - 1)
-        // photos_per_page  # округлення в більшу сторону
+    (total_photos + photos_per_page - 1) // photos_per_page
 )
+# округлення в більшу сторону
 print(f'Ігорю знадобиться {pages_needed} сторінок, щоб вклеїти всі фото.')
 
 # task 10
@@ -172,7 +168,8 @@ tank_capacity = 48  # Місткість баку, літрів
 
 total_fuel_needed = (distance_km / 100) * fuel_per_100_km
 refuels_needed = total_fuel_needed / tank_capacity
-refuels_needed = int(refuels_needed) if refuels_needed.is_integer() else int(refuels_needed) + 1
+refuels_needed = (int(refuels_needed) if refuels_needed.is_integer()
+                  else int(refuels_needed) + 1)
 
 print(
     f'Для подорожі знадобиться {total_fuel_needed} літрів бензину.',
