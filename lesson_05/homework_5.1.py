@@ -52,26 +52,14 @@ search_criteria = (2017, 1.6, 36000)
 # Пошук по критеріям
 year_min, engine_min, price_max = search_criteria
 
-# По року
-filtered_by_year = []
+# По року + По обʼєму двигуна + По ціні
+filtered_cars = []
 for name, details in car_data.items():
-    if details[1] >= year_min:
-        filtered_by_year.append((name, details))
-
-# По обʼєму двигуна
-filtered_by_engine = []
-for name, details in filtered_by_year:
-    if details[2] >= engine_min:
-        filtered_by_engine.append((name, details))
-
-# По ціні
-filtered_by_price = []
-for name, details in filtered_by_engine:
-    if details[4] <= price_max:
-        filtered_by_price.append((name, details))
+    if details[1] >= year_min and details[2] >= engine_min and details[4] <= price_max:
+        filtered_cars.append((name, details))
 
 # Сортування по ціні
-sorted_cars = sorted(filtered_by_price, key=lambda x: x[1][4])
+sorted_cars = sorted(filtered_cars, key=lambda x: x[1][4])
 
 # Перші 5 результатів
 for car in sorted_cars[:5]:
